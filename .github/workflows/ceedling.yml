@@ -41,3 +41,10 @@ jobs:
     - name: Run test_all_gcov
       run: |
         make test_all_gcov
+
+    - name: Archive code coverage html report
+      uses: actions/upload-artifact@v3
+      with:
+          name: code-coverage-report
+          path: build_ceedling/artifacts/gcov
+
