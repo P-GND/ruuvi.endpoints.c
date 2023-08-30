@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <math.h>
 
+
 #if RE_3_ENABLED
 
 #define RE_3_ENCODE_INVALID_PRECISION       0.00001f
