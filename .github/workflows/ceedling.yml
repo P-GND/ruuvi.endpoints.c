@@ -29,9 +29,15 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Install Ceedling
-      run: gem install ceedling
-
+      run: |
+        gem install ceedling
+        sudo pip install gcovr
     # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
+    - name: Run test_all
       run: |
         make test_all
+        
+    # Runs a set of commands using the runners shell
+    - name: Run test_all_gcov
+      run: |
+        make test_all_gcov
